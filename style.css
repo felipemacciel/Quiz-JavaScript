@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+
+@keyframes sliders {
+     from {transform: translateY(100%); opacity: 0;}
+     to {transform: translateY(0); opacity: 1;}
+}
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+body::before{
+    position: absolute;
+    background-image: url(imagens/fundo_quiz_js.jpg);
+    background-repeat: no-repeat;
+    content: ' ';
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 380px;
+    background-color: #535353;
+    text-align: justify;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    position: relative;
+    border-radius: 4px;
+
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 20px solid transparent;
+    border-radius: 4px;
+    border-top: 20px solid rgb(54, 53, 53);
+    border-right: 20px solid rgb(54, 53, 53); 
+
+}
+.icon {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon img{
+    width: 200px;
+
+}
+
+.content {
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 10px;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    
+}
+
+.content h3{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+    color: #141313;
+
+}
+
+.content h3::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 45px;
+    background-color: rgb(251, 209, 95);
+    bottom: 2px;
+    border-radius: 100px;
+}
+
+.content p{
+    color: #b7b7b7;
+
+}
+
+.radio {
+    appearance:none;
+    display: inline; 
+    padding: 1px;
+    
+
+}
+
+.radio::after {
+    content: '';
+    background-color: #313131;    
+    border-radius: 4px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    margin-left: 2px;
+    cursor: pointer;
+
+}
+
+.radio:checked::after {
+    content: ' ';
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: rgb(255, 167, 2);
+    
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 25%;
+    background-color: #cac8c8;
+    border-radius: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.option {
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(transparent, #3f3f3f);
+}
+
+.img_resp img{
+    width: 330px;
+    margin-left: 20px;
+}
+
+.answer{
+    overflow: hidden;
+    background: linear-gradient(transparent, #3f3f3f);
+    height: 0px;
+    margin: 10px;
+    color: #b7b7b7;
+}
+
+.answer p{
+    font-size: 15px;
+    font-style: italic;
+
+}
+
+.answer.active {    
+    animation: sliders 0.8s normal;
+    height: 100%;
+}
+
+#read_button {
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    background-color: rgb(251, 209, 95);
+    color: #313131;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+#read_button:hover {
+    background-color: transparent;
+    color: rgb(255, 217, 1);
+    transition: all 0.2s ease-in-out;
+}
+
+.card.active .content {
+    height: auto;
+
+}
+
+.card.active .content::before {
+    visibility: hidden;
+}
+
+footer p{
+    font-style: italic;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+
+}

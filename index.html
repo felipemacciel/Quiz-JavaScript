@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/js.png" />
+    <title>Quiz JavaScript</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon">
+            <img src="imagens/icone_js.png" alt="icone">
+        </div>
+
+        <div class="content">
+            <h3>Quiz JavaScript</h3>
+            <p>const num1 = "3.59"; <br /> const num2 = "2"; <br /> console.log(Number(num1 + num2));</p>
+
+        </div>
+        <div>
+            <div class="option">
+                <label class="checkbox">
+                    <input type="radio" class="radio" value="1" name="resposta[1][]" />A. 5.59</label>
+                <label class="checkbox">
+                    <input type="radio" class="radio" value="1" name="resposta[1][]" />B. 3.592</label>
+                <label class="checkbox">
+                    <input type="radio" class="radio" value="1" name="resposta[1][]" />C. 5</label>
+                <label class="checkbox">
+                    <input type="radio" class="radio" value="1" name="resposta[1][]" />D. NaN</label>
+            </div>
+
+            <div class="answer">
+                <p>O Método Number() converte uma string para númmero.</p>
+                <p>Nesse exemplo, a operação num1 + num2 tem precedência, portanto é executada antes da conversão.</p>
+                <div class="img_resp"> <img src="imagens/respota.png" alt="resposta"></div>
+            </div>
+        </div>
+        <button id="read_button"> Veja a resposta!</button>
+
+    </div>
+
+
+<footer>
+    <p>Felipe maciel</p>
+</footer>
+</body>
+<script src="script.js"></script>
+
+</html>
